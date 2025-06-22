@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+Taller Nota Acumulativa
+Este proyecto es una aplicación web desarrollada con React para la gestión de notas de alumnos. Permite a los usuarios realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre los registros de los estudiantes, calculando automáticamente el promedio final de cada alumno y el promedio general de la asignatura.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ Características Principales
+Ingresar Alumnos: Formulario para añadir nuevos alumnos con su nombre, apellido, asignatura y cuatro notas correspondientes.
+Listar Alumnos: Tabla que muestra todos los alumnos registrados con sus respectivas notas y su promedio final ponderado.
+Modificar Alumnos: Funcionalidad para seleccionar un alumno y editar su información a través del mismo formulario.
+Eliminar Alumnos: Opción para eliminar el registro de un alumno de la lista, con una solicitud de confirmación.
+Cálculo de Promedio Individual: La nota final de cada alumno se calcula automáticamente basándose en las siguientes ponderaciones:
+Nota 1: 15%
+Nota 2: 25%
+Nota 3: 30%
+Nota 4: 30%
+Cálculo de Promedio General: La aplicación muestra en tiempo real el promedio de las notas finales de todos los alumnos registrados.
+Estilo Condicional: La nota final de un alumno y el promedio general de la asignatura se muestran en color rojo si son inferiores a 4.0, y en verde si son iguales o superiores.
+Interfaz Responsiva: Diseño limpio y adaptable a diferentes tamaños de pantalla gracias a Bootstrap.
+🚀 Tecnologías Utilizadas
+Este proyecto fue construido utilizando tecnologías modernas del ecosistema de JavaScript para el desarrollo frontend:
 
-## Available Scripts
+React: Biblioteca principal de JavaScript para construir la interfaz de usuario a través de componentes.
+Node.js: Utilizado como entorno de ejecución para el servidor de desarrollo de React y la gestión de paquetes.
+Bootstrap 5: Framework de CSS para el diseño y la maquetación de la interfaz, facilitando un diseño responsivo y moderno.
+HTML5 y CSS3: Para la estructura y estilos personalizados de la aplicación.
+Git y GitHub: Para el control de versiones y el respaldo del código en la nube.
+⚙️ Instalación y Puesta en Marcha
+Para ejecutar este proyecto en tu entorno local, sigue estos sencillos pasos:
 
-In the project directory, you can run:
+Clonar el repositorio (si está en GitHub):
 
-### `npm start`
+Bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/TU_USUARIO/taller-notas.git
+cd taller-notas
+Instalar las dependencias del proyecto:
+Este comando leerá el archivo package.json e instalará React y todas las librerías necesarias para que el proyecto funcione.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bash
 
-### `npm test`
+npm install
+Ejecutar la aplicación en modo de desarrollo:
+Este comando iniciará un servidor de desarrollo local (generalmente en http://localhost:3000) y abrirá la aplicación en tu navegador web. La página se recargará automáticamente cada vez que hagas un cambio en el código.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Bash
 
-### `npm run build`
+npm start
+Generar la versión de producción (opcional):
+Si deseas crear una versión optimizada para desplegar en un servidor, ejecuta:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm run build
+Esto creará una carpeta build con todos los archivos estáticos listos para producción.
